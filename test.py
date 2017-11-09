@@ -30,12 +30,22 @@ import unittest
 #   "nextblockhash": "00000001d83bf07ff4faddf97a5e68e760f012d6526126b2668aea29bd23bd09"
 # }
 
+# header_hex = ("version" + -> ok
+#    "prevBlockHash" +
+#    "rootHash"
+#    "time" + -> ok
+#    "bits" + 
+#    "nonce") -> ok
+
+
 header_hex = ("02000000" +
     "b67a40f3cd5804437a108f105533739c37e6229bc1adcab385140b59fd0f0000" +
     "a71c1aade44bf8425bec0deb611c20b16da3442818ef20489ca1e2512be43eef"
-    "814cdb52" +
-    "f0ff0f1e" +
-    "dbf70100")
+    "BCFB6459" +
+    "f0ff0f1e" + 
+    "3682BB08")
+
+
 
 best_hash = '434341c0ecf9a2b4eec2644cfadf4d0a07830358aed12d0ed654121dd9070000'
 
