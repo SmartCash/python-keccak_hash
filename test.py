@@ -6,7 +6,7 @@ import unittest
 # smartcash block #1
 # rc125@ubuntu:~/.smartcash$ smartcashd getblockhash 1
 # 00000009c4e61bee0e8d6236f847bb1dd23f4c61ca5240b74852184c9bf98c30
-# rc125@ubuntu:~/.smartcash$ smartcashd getblock 000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343
+# rc125@ubuntu:~/.smartcash$ smartcashd getblock 00000009c4e61bee0e8d6236f847bb1dd23f4c61ca5240b74852184c9bf98c30
 # {
 #   "hash": "00000009c4e61bee0e8d6236f847bb1dd23f4c61ca5240b74852184c9bf98c30",
 #   "confirmations": 172736,
@@ -30,12 +30,12 @@ import unittest
 #   "nextblockhash": "00000001d83bf07ff4faddf97a5e68e760f012d6526126b2668aea29bd23bd09"
 # }
 
-# header_hex = ("version" + -> ok
+# header_hex = ("version" +
 #    "prevBlockHash" +
 #    "rootHash"
-#    "time" + -> ok
+#    "time" +
 #    "bits" + 
-#    "nonce") -> ok
+#    "nonce")
 
 
 header_hex = ("02000000" +
@@ -47,7 +47,7 @@ header_hex = ("02000000" +
 
 
 
-best_hash = '434341c0ecf9a2b4eec2644cfadf4d0a07830358aed12d0ed654121dd9070000'
+best_hash = '308cf99b4c185248b74052ca614c3fd21dbb47f836628d0eee1be6c409000000'
 
 class TestSequenceFunctions(unittest.TestCase):
 
