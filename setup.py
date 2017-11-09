@@ -1,8 +1,8 @@
 from distutils.core import setup, Extension
 
-x11_hash_module = Extension('x11_hash',
-                                 sources = ['x11module.c',
-                                            'x11hash.c',
+keccak_hash_module = Extension('keccak_hash',
+                                 sources = ['keccakmodule.c',
+                                            'keccakhash.c',
                                             'sha3/blake.c',
                                             'sha3/bmw.c',
                                             'sha3/groestl.c',
@@ -16,7 +16,7 @@ x11_hash_module = Extension('x11_hash',
                                             'sha3/shavite.c'],
                                include_dirs=['.', './sha3'])
 
-setup (name = 'x11_hash',
+setup (name = 'keccak_hash',
        version = '1.4',
-       description = 'Binding for X11 proof of work hashing.',
-       ext_modules = [x11_hash_module])
+       description = 'Binding for keccak proof of work hashing.',
+       ext_modules = [keccak_hash_module])
