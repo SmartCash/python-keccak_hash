@@ -3,26 +3,31 @@ from binascii import unhexlify, hexlify
 
 import unittest
 
-# dash block #1
-# moo@b1:~/.dash$ dashd getblockhash 1
-# 000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343
-# moo@b1:~/.dash$ dashd getblock 000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343
+# smartcash block #1
+# rc125@ubuntu:~/.smartcash$ smartcashd getblockhash 1
+# 00000009c4e61bee0e8d6236f847bb1dd23f4c61ca5240b74852184c9bf98c30
+# rc125@ubuntu:~/.smartcash$ smartcashd getblock 000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343
 # {
-#     "hash" : "000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343",
-#     "confirmations" : 169888,
-#     "size" : 186,
-#     "height" : 1,
-#     "version" : 2,
-#     "merkleroot" : "ef3ee42b51e2a19c4820ef182844a36db1201c61eb0dec5b42f84be4ad1a1ca7",
-#     "tx" : [
-#         "ef3ee42b51e2a19c4820ef182844a36db1201c61eb0dec5b42f84be4ad1a1ca7"
-#     ],
-#     "time" : 1390103681,
-#     "nonce" : 128987,
-#     "bits" : "1e0ffff0",
-#     "difficulty" : 0.00024414,
-#     "previousblockhash" : "00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6",
-#     "nextblockhash" : "00000bafcc571ece7c5c436f887547ef41b574e10ef7cc6937873a74ef1efeae"
+#   "hash": "00000009c4e61bee0e8d6236f847bb1dd23f4c61ca5240b74852184c9bf98c30",
+#   "confirmations": 172736,
+#   "strippedsize": 356,
+#   "size": 356,
+#   "weight": 1424,
+#   "height": 1,
+#   "version": 2,
+#   "versionHex": "00000002",
+#   "merkleroot": "a68bf0e348915b09d7da1d8dae05fb04d9016d06d5d964c4cc85dab8f6b032e9",
+#   "tx": [
+#    "a68bf0e348915b09d7da1d8dae05fb04d9016d06d5d964c4cc85dab8f6b032e9"
+#   ],
+#   "time": 1499790268,
+#   "mediantime": 1499790268,
+#   "nonce": 146506294,
+#   "bits": "1e0ffff0",
+#   "difficulty": 0.000244140625,
+#   "chainwork": "0000000000000000000000000000000000000000000000000000000000200020",
+#   "previousblockhash": "000007acc6970b812948d14ea5a0a13db0fdd07d5047c7e69101fa8b361e05a4",
+#   "nextblockhash": "00000001d83bf07ff4faddf97a5e68e760f012d6526126b2668aea29bd23bd09"
 # }
 
 header_hex = ("02000000" +
