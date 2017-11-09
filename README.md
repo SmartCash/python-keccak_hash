@@ -1,7 +1,7 @@
-x11_hash (v1.4)
+keccak_hash (v1.4)
 ===========================
 
-Python module for Dash's X11 hashing.
+Python module for Smartcash's Keccak hashing.
 
 
 Install
@@ -23,7 +23,5 @@ Credits
 -------
 
 * Module written by @chaeplin https://github.com/chaeplin/xcoin-hash
-* Module maintained by @eduffield https://github.com/darkcoinproject/xcoin-hash
-* Module maintained by @flare https://github.com/nightlydarkcoin/xcoin-hash
-* Module maintained by @vertoe https://github.com/vertoe/darkcoin_hash
-* Module maintained by @jakehaas https://github.com/jakehaas/x11_hash
+* Module maintained by @rc125 https://github.com/Smartcash/smartcash
+* Module maintained by @clausiobarbosa https://github.com/Smartcash/smartcash
