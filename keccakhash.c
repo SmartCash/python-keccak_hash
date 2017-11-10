@@ -26,10 +26,10 @@ void keccak_hash(const char* input, char* output)
     uint64_t hashA[32], hashB[32];
 
     sph_keccak256_init(&ctx_keccak);
-    sph_keccak256 (&ctx_keccak, hashA, 128);
+    sph_keccak256 (&ctx_keccak, hashA, 64);
     sph_keccak256_close(&ctx_keccak, hashB);
 
-    memcpy(output, hashA, 64);
+    memcpy(output, hashA, 32);
 
 }
 
