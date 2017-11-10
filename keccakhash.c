@@ -23,9 +23,7 @@ void keccak_hash(const char* input, char* output)
 
     
     //these uint512 in the c++ source of the client are backed by an array of uint32
-    uint64_t hashA[16], hashB[16];
-    
-    //uint256_t hashA[16], hashB[16];
+    uint64_t hashA[32], hashB[32];
 
     sph_keccak256_init(&ctx_keccak);
     sph_keccak256 (&ctx_keccak, hashA, 64);
