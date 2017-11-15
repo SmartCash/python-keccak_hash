@@ -2,6 +2,7 @@ import keccak_hash
 from binascii import unhexlify, hexlify
 
 import unittest
+import sys
 
 # smartcash block #1
 # rc125@ubuntu:~/.smartcash$ smartcashd getblockhash 1
@@ -30,16 +31,9 @@ import unittest
 #   "nextblockhash": "00000001d83bf07ff4faddf97a5e68e760f012d6526126b2668aea29bd23bd09"
 # }
 
-# In little endian format
-# header_hex = ("version" +
-#    "prevBlockHash" +
-#    "rootHash"
-#    "time" +
-#    "bits" + 
-#    "nonce")
 header_hex = ("02000000" +
     "a4051e368bfa0191e6c747507dd0fdb03da1a0a54ed14829810b97c6ac070000" +
-    "09bd23bd29ea8a66b2266152d612f060e7685e7af9ddfaf47ff03bd801000000"
+    "e932b0f6b8da85ccc464d9d5066d01d904fb05ae8d1ddad7095b9148e3f08ba6"
     "bcfb6459" +
     "f0ff0f1e" + 
     "3682bb08")
@@ -53,9 +47,9 @@ class TestSequenceFunctions(unittest.TestCase):
         self.best_hash = best_hash
 
     def test_keccak_hash(self):
-        self.pow_hash = hexlify(keccak_hash.getPoWHash(self.block_header))
+        self.pow_hash = keccak_hash.getPoWHash(self.block_header)
+        self.pow_hash = hexlify(self.pow_hash)
         self.assertEqual(self.pow_hash, self.best_hash)
-
 
 if __name__ == '__main__':
     unittest.main()
