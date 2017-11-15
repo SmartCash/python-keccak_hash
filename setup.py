@@ -8,5 +8,8 @@ keccak_hash_module = Extension('keccak_hash',
 
 setup (name = 'keccak_hash',
        version = '1.4',
+       author = 'rc125',
+  	   author_email = 'rc125@protonmail.com',
+  	   url = 'https://github.com/rc125/python-keccak_hash',
        description = 'Binding for keccak proof of work hashing.',
        ext_modules = [keccak_hash_module])
